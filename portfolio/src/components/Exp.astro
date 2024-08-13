@@ -1,0 +1,30 @@
+---
+import ExpItem from './ExpItem.astro'
+
+const EXP = [{
+    date: 'February 2022',
+    title: 'Application UI code in Tailwind CSS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id ultricies sapien. ligula magna vitae neque. Etiam non ante et ante pellentesque pharetra eget eget mi. Duis blandit viverra interdum.',
+},
+{
+    date: 'February 2022',
+    title: 'Application UI code in Tailwind CSS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id ultricies sapien. ligula magna vitae neque. Etiam non ante et ante pellentesque pharetra eget eget mi. Duis blandit viverra interdum.',
+},
+{
+    date: 'February 2022',
+    title: 'Application UI code in Tailwind CSS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id ultricies sapien. ligula magna vitae neque. Etiam non ante et ante pellentesque pharetra eget eget mi. Duis blandit viverra interdum.',
+}]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXP.map(exp => (
+            <li class="mb-10 ms-6">            
+                <ExpItem {...exp}></ExpItem>
+            </li>
+        ))
+    }
+</ol>
+

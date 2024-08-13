@@ -1,24 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import GithubIcon from '../icons/github.astro';
+import LinkedinIcon from '../icons/linkedin.astro';
+import LinkWithIcon from '../components/LinkWithIcon.astro';
+import MailIcon from '../icons/mail.astro'
+import SectionContainer from '../components/SectionContainer.astro';
+import Exp from '../components/Exp.astro'
+import Briefcase from '../icons/briefcase.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-3 pb-4">
+<Layout title="Welcome to my barrasca.">
+	<main class="px-5">
+		<SectionContainer id="top" class="pt-40 pb-24">
+			<h1 class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-3 pb-4 lg:pb-10">
 				Hey, soy Bruno <a rel="noopener" href="https://linkedin.com" class="flex items-center justify-center"> 
 					<Badge>Disponible para trabajar</Badge></a>
 			</h1>
-			<h2 class="text-white text-xl">
+			<h2 class="text-white text-xl lg:text-2xl text-wrap max-w-[700px]">
 				+123 años de experiencia. Desarrollador de composiciones eficientes. 
 				De Perú 💀. Especializado en crear soluciones espectaculares.
 			</h2>
 
-		<ul>
+		<nav class="flex gap-x-4 mt-8 flex-wrap">
+			<LinkWithIcon href="https://linkedin.com">
+				<LinkedinIcon class="size-4 md:size-6"></LinkedinIcon>
+				LinkedIn
+			</LinkWithIcon>
+			<LinkWithIcon href="https://github.com">
+				<GithubIcon class="size-4 md:size-6"></GithubIcon>
+				Github
+			</LinkWithIcon>
+			<LinkWithIcon href="#">
+				<MailIcon class="size-4 md:size-6"></MailIcon>
+				brunorfg18@gmail.com
+			</LinkWithIcon>
+		</nav>
+		</SectionContainer>
+		{/*Change if got it*/}
+		<SectionContainer id="exp" >
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<Briefcase class="size-7"></Briefcase>
+				Experiencia laboral
+			</h2>
+			<Exp></Exp>
+		</SectionContainer>
 
-		</ul>
-		</section>
+
 	</main>
 </Layout>
